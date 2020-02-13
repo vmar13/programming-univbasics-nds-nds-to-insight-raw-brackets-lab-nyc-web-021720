@@ -15,18 +15,21 @@ def directors_totals(nds)
 while row_index < nds.length do
   current_director = nds[row_index][:name]
   hash[current_director] = gross_for_director(nds[row_index])
-  
-  name = nds[row_index][:name]
-  hash[name] = 0
-  movies = nds[row_index][:movies]
-  counter = 0 
-  while counter < movies.length do
-  # binding.pry 
-      end
-      counter += 1 
-  row_index += 1 
-  p grand_total
+  row_index += 1
 end 
+hash 
+end 
+
+def gross_for_director(director_data)
+  movie_index = 0 
+  movies = director_data[:movies]
+  total_gross_for_director = 0 
+  
+  while movie_index < movies.length do 
+    total_gross_for_director += movies[movie_index][:worldwide_gross]
+    movie_index += 1 
+  end 
+total_gross_for_director
 end 
 
   # result = {
