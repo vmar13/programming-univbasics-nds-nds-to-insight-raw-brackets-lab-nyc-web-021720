@@ -11,13 +11,11 @@ pretty_print_nds(directors_database)
 def directors_totals(nds)
   hash = {}
   
-  # iterate and add totals
-  # ...
-  # return the hash
-  
-row_index = 0 
+  row_index = 0 
 while row_index < nds.length do
   current_director = nds[row_index][:name]
+  hash[current_director] = gross_for_director(nds[row_index])
+  
   name = nds[row_index][:name]
   hash[name] = 0
   movies = nds[row_index][:movies]
@@ -34,6 +32,9 @@ end
   # result = {
 #   }
   
+    # iterate and add totals
+  # ...
+  # return the hash
 #   #
 #   # Use loops, variables and the accessing method, [], to loop through the NDS
 #   # and total up all the
