@@ -23,7 +23,7 @@ while row_index < nds.length do
   movies = nds[row_index][:movies]
   counter = 0 
   while counter < movies.length do
-  binding.pry 
+  # binding.pry 
       end
       counter += 1 
   row_index += 1 
