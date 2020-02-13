@@ -9,7 +9,6 @@ end
 pretty_print_nds(directors_database)
 
 def directors_totals(nds)
-
   hash = {}
   
   # iterate and add totals
@@ -17,7 +16,8 @@ def directors_totals(nds)
   # return the hash
   
 row_index = 0 
-while row_index < nds.length do 
+while row_index < nds.length do
+  current_director = nds[row_index][:name]
   name = nds[row_index][:name]
   hash[name] = 0
   movies = nds[row_index][:movies]
